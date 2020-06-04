@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="../static/navigation_bar_1-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <p id="nav-text">PredCov19</p>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="{{url_for('default')}}">Accueil</a></li>
+                <li><a href="{{url_for('patients')}}">Patients</a></li>
+                <li><a href="{{url_for('praticiens')}}">Praticiens</a></li>
+                <li><a href="{{url_for('about')}}">About</a></li>
+            </ul>
+        </nav>    
+        <a href="{{url_for('contact')}}" class="cta"><button id="contact-button">Contact</button></a>
+    </header>
+
+    <div class="corps">
+        <div class="agents">
+            <a href="{{url_for('patients')}}" class="btn" id="patients">Patients</a>
+            <a href="{{url_for('praticiens')}}" class="btn" id="praticiens">Praticiens</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-items">
+            <ul class="footer_links">
+                <li><a href="{{url_for('default')}}" id="copyright">Copyright © 2020</a></li>
+                <li id="footer-text">PredCov19</li>
+                <li><a href="{{url_for('about')}}" id="author">Author : Nasser-eddine Monir</a></li>
+            </ul>
+        </div>
+        
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/praticiens-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <p id="nav-text">PredCov19</p>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="{{ url_for('default') }}">Accueil</a></li>
+                <li><a href="{{ url_for('patients') }}">Patients</a></li>
+                <li><a href="{{ url_for('praticiens') }}">Praticiens</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+            </ul>
+        </nav>
+        <a href="{{ url_for('contact') }}" class="cta"><button id="contact-button">Contact</button></a>
+    </header>
+    <div class="corps">
+        <div class="wrapper">
+            <h1 id="info">Entrez vos informations</h1>
+            <form action="/send_praticiens" method="POST">
+                
+                
+                <!-- --------------------------- Age --------------------------------- -->
+            
+                <input class="simple-answer" type="text" placeholder="Quel est votre age ?" name="age">
+
+                <!-- --------------------------- Hemoglobin --------------------------------- -->
+            
+                <input class="simple-answer" type="text" placeholder="Taux d'Hemoglobines  " name="Hemoglobin">
+
+                <!-- --------------------------- Platelets --------------------------------- -->
+            
+                <input class="simple-answer" type="text" placeholder="Taux de Plaquettes  " name="Platelets">
+
+                <!-- --------------------------- Leukocytes --------------------------------- -->
+            
+                <input class="simple-answer" type="text" placeholder="Taux de Leukocytes  " name="Leukocytes">
+
+                <!-- --------------------------- Eosinophils --------------------------------- -->
+            
+                <input class="simple-answer" type="text" placeholder="Taux de Eosinophiles  " name="Eosinophils">
+
+                <!-- --------------------------- Monocytes --------------------------------- -->
+            
+                <input class="simple-answer" type="text" placeholder="Taux de Monocytes  " name="Monocytes">
+                
+                <!-- -------------------- Rhinovirus/Enterovirus ----------------------------- -->
+
+                <div class="radio-answer">
+                    <h1> Rhinovirus/Enterovirus contracté ? </h1>
+                    <div class="radio-button-wrapper"> 
+                        <label>
+                            <input type="radio" class="option-input radio" name="Rhino" value="1" />
+                        Oui 
+                        </label>
+                        <label>
+                            <input type="radio" class="option-input radio" name="Rhino" value="0" />
+                        Non 
+                        </label>
+                    </div>  
+                </div>
+
+                <!-- -------------------------- SUBMIT BUTTON --------------------------------- -->
+                
+                <input id="send-button" type="submit" value="Envoyer"></input>
+
+            </form>
+            
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-items">
+            <ul class="footer_links">
+                <li><a href="{{url_for('default')}}" id="copyright">Copyright © 2020</a></li>
+                <li id="footer-text">PredCov19</li>
+                <li><a href="{{url_for('about')}}" id="author">Author : Nasser-eddine Monir</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+</body>
+</html>

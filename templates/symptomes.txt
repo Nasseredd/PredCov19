@@ -1,0 +1,35 @@
+############################ PATIENTS #########################
+
+Fever : fever
+Tiredness : tiredness 
+Dry-Cough : dry_cough
+Difficulty-in-Breathing	R	: breathing_difficulty
+None_Sympton 
+Pains	
+Nasal-Congestion : nasal_congestion
+Runny-Nose : runny_nose
+Diarrhea : diarrhea
+
+None_Experiencing 
+
+Gender_Female	
+Gender_Male		
+
+Severity_Mild	
+Severity_Moderate	
+Severity_None	
+Severity_Severe	
+
+Contact_Dont-Know	
+Contact_No	
+Contact_Yes	
+
+Country
+
+
+
+
+
+
+
+############################ RESEARCHERS #########################

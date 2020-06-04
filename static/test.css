@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+div {
+    margin: 0px;
+    padding: 100%;
+    background-image: url("images/coronavirus.jpg"); 
+    position:relative;
+    padding:25.1%;
+    /*min-height:100%;
+    width:100%;
+    color: rgb(48,69,151);
+    background-image: url("images/coronavirus.jpg");
+    -webkit-background-size: cover; 
+    background-size: cover;  */
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/patients-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <p id="nav-text">PredCov19</p>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="{{ url_for('default') }}">Accueil</a></li>
+                <li><a href="{{ url_for('patients') }}">Patients</a></li>
+                <li><a href="{{ url_for('praticiens') }}">Praticiens</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+            </ul>
+        </nav>
+        <a href="{{ url_for('contact') }}" class="cta"><button id="contact-button">Contact</button></a>
+    </header>
+    <div class="corps">
+        <div class="wrapper">
+            <h1 id="info">Entrez vos informations</h1>
+            <form action="/send" method="POST">
+                
+
+                <!-- --------------------------- Age --------------------------------- -->
+            
+                <input class="simple-answer" type="text" placeholder="Quel est votre age ?" name="age">
+
+                <!-- -------------------------- Gender ------------------------------- -->
+
+                <div class="radio-answer">
+                    <h1>Vous êtes un(e) </h1>
+                    <div class="radio-button-wrapper"> 
+                        <label>
+                            <input type="radio" class="option-input radio" name="gender" value="1" />
+                        Homme 
+                        </label>
+                        <label>
+                            <input type="radio" class="option-input radio" name="gender" value="0" />
+                        Femme 
+                        </label>
+                    </div> 
+                </div>
+
+                <!-- --------------------------- Fever ------------------------------- -->
+                
+                <div class="ligne">
+                    <div class="radio-answer">
+                        <h1>Avez vous de la fièvre ? </h1>
+                        <div class="radio-button-wrapper"> 
+                            <label>
+                                <input type="radio" class="option-input radio" name="fever" value="1" />
+                            Oui 
+                            </label>
+                            <label>
+                                <input type="radio" class="option-input radio" name="fever" value="0" />
+                            Non 
+                            </label>
+                        </div> 
+                    </div>
+                    <span class="tooltip" data-tooltip="username must consist of 29 symbol
+                    susername must consist of 29 symbols username must consist of 29 symbols">?</span>
+                </div>
+
+                <!-- -------------------------- Tiredness --------------------------------- -->
+                
+                <div class="ligne">
+                    <div class="radio-answer">
+                        <h1>Ressentez vous une fatigue inhabituelle ? </h1>
+                        <div class="radio-button-wrapper"> 
+                            <label>
+                                <input type="radio" class="option-input radio" name="tiredness" value="1" />
+                            Oui 
+                            </label>
+                            <label>
+                                <input type="radio" class="option-input radio" name="tiredness" value="0" />
+                            Non 
+                            </label>
+                        </div>  
+                    </div>
+                </div>
+                
+                
+                <!-- -------------------------- Dry-Cough --------------------------------- -->
+
+                <div class="ligne">
+                    <div class="radio-answer">
+                        <h1>Avez vous une toux sèche ? </h1>
+                        <div class="radio-button-wrapper"> 
+                            <label>
+                                <input type="radio" class="option-input radio" name="dry_cough" value="1" />
+                            Oui 
+                            </label>
+                            <label>
+                                <input type="radio" class="option-input radio" name="dry_cough" value="0" />
+                            Non 
+                            </label>
+                        </div>  
+                    </div>
+                </div>
+
+                <!-- -------------------------- Nasal Congestion --------------------------------- -->
+
+                <div class="ligne">
+                    <div class="radio-answer">
+                        <h1>Avez vous une congestion nasale ? </h1>
+                        <div class="radio-button-wrapper"> 
+                            <label>
+                                <input type="radio" class="option-input radio" name="nasal_congestion" value="1" />
+                            Oui 
+                            </label>
+                            <label>
+                                <input type="radio" class="option-input radio" name="nasal_congestion" value="0" />
+                            Non 
+                            </label>
+                        </div>  
+                    </div>
+                </div>
+
+                <!-- -------------------------- Runny Nose --------------------------------- -->
+
+                <div class="ligne">
+                    <div class="radio-answer">
+                        <h1>Avez vous le nez qui coule ? </h1>
+                        <div class="radio-button-wrapper"> 
+                            <label>
+                                <input type="radio" class="option-input radio" name="runny_nose" value="1" />
+                            Oui 
+                            </label>
+                            <label>
+                                <input type="radio" class="option-input radio" name="runny_nose" value="0" />
+                            Non 
+                            </label>
+                        </div>  
+                    </div>
+                </div>
+
+                <!-- -------------------------- Diarhea --------------------------------- -->
+
+                <div class="ligne">
+                    <div class="radio-answer">
+                        <h1>Avez vous une diarrhée ? </h1>
+                        <div class="radio-button-wrapper"> 
+                            <label>
+                                <input type="radio" class="option-input radio" name="diarhea" value="1" />
+                            Oui 
+                            </label>
+                            <label>
+                                <input type="radio" class="option-input radio" name="diarhea" value="0" />
+                            Non 
+                            </label>
+                        </div>  
+                    </div>
+                </div>
+                
+                <!-- -------------------------- Covid Contact --------------------------------- -->
+
+                <div class="ligne">
+                    <div class="radio-answer">
+                        <h1>Avez vous eu contact avec le Covid ? </h1>
+                        <div class="radio-button-wrapper"> 
+                            <label>
+                                <input type="radio" class="option-input radio" name="contact" value="1" />
+                            Oui 
+                            </label>
+                            <label>
+                                <input type="radio" class="option-input radio" name="contact" value="0" />
+                            Non 
+                            </label>
+                        </div>  
+                    </div>
+                </div>
+
+                <!-- -------------------------- SUBMIT BUTTON --------------------------------- -->
+                
+                <input id="send-button" type="submit" value="Envoyer"></input>
+
+            </form>
+            
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-items">
+            <ul class="footer_links">
+                <li><a href="{{url_for('default')}}" id="copyright">Copyright © 2020</a></li>
+                <li id="footer-text">PredCov19</li>
+                <li><a href="{{url_for('about')}}" id="author">Author : Nasser-eddine Monir</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+</body>
+</html>
